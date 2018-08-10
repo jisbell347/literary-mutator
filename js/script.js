@@ -16,8 +16,24 @@ function rot13() {
 	for(let i=0; i<encrypt.length; i++) {
 		let letter = encrypt[i];
 		// if letter is Uppercase, store it to the upper variable as uppercase
-		let upper = (letter == letter.toUpperCase());
+		let upper = (letter === letter.toUpperCase());
 		//else store it to the letter variable as lowercase
 		letter = letter.toLowerCase();
+
+		// grabs the index number of the letter in the alphabet variable and stores it to index variable
+		let index = alphabet.indexOf(letter);
+		// if index of the character is equal to -1, add it to the newSentence variable without offsetting it - i.e. spaces.
+		if(index === -1) {
+			newSentence += letter;
+			//else add the offset to the index value then add the length of the alphabet variable.
+		} else {
+			index = ((index + letterOffset) + alphabet.length);
+			//store the offset in the nextLetter variable
+			let nextLetter = fullAlphabet[index];
+			//if the nextLetter value is uppercase keep it uppercase
+			if(upper) nextLetter = nextLetter.toUpperCase();
+			//add the letter to the newSentence variable and repeat from the start of the loop.
+			newSentence += nextLetter;
+		}
 	}
 }
