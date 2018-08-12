@@ -11,23 +11,34 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="row">
+				<div class="row pt-5">
 					<div class="col-md-4">
 						<h4 class="display-5">Fun with ROT13!</h4>
 						<p id="encrypt" class="border border-dark p-3"> Espresso, steamed, strong frappuccino lungo robusta caffeine fair trade instant. Blue mountain decaffeinated,
 							shop, single shot, medium arabica acerbic in est blue mountain sweet roast. Pumpkin spice, robust extra, siphon,
 							froth arabica cultivar crema body. Viennese cup robust turkish in fair trade body.</p>
-						<p> Redeye, est, strong macchiato crema percolator caffeine breve. Half and half irish, sweet, flavour chicory robust
-							skinny so organic. And, beans, single origin coffee milk fair trade extraction. Grounds white fair trade lungo,
-							white spoon beans single origin steamed aged.</p>
-						<p>White aromatic, affogato beans, body, strong est that organic robusta. Doppio, viennese beans cappuccino black strong steamed.
-							Cream, viennese robust caffeine cortado arabica decaffeinated. Half and half, spoon at so, irish aroma ut robusta doppio.</p>
 					</div>
-					<div class="col-md-4 p-5 m-5">
+					<div class="col-md-4 p-5 my-5 text-center">
 						<button type="button" onclick="rot13()" class="btn btn-dark"> Encrypt</button>
 					</div>
 					<div class="col-md-4">
-						<p id="encryptedSentence"></p>
+						<h4 class="display-5">New Sentence</h4>
+						<p id="encryptedSentence" class="border border-primary p-3"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<p id="starTrek">What? We're not at all alike! Congratulations - you just destroyed the Enterprise. You're going to be an interesting companion,
+							Mr. Data. The Federation's gone; the Borg is everywhere! Computer, lights up! Captain, why are we out here chasing comets? We know you're
+							dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. But the probability of making a six is no greater
+							than that of rolling a seven. Yes, absolutely, I do indeed concur, wholeheartedly! I think you've let your personal feelings cloud your judgement.
+							I suggest you drop it, Mr. Data.</p>
+					</div>
+					<div class="col-md-4">
+						<button type="button" class="btn btn-success" onclick="replaceWords()"></button>
+					</div>
+					<div class="col-md-4">
+						<p id="starWars" class="border border-danger"></p>
 					</div>
 				</div>
 			</div>
