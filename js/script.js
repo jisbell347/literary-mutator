@@ -71,9 +71,13 @@ function replaceWords(){
  Highlight a Word
  **********************************/
 function highlightSearch() {
+	// Grab the value of the input box.
 	let text = document.getElementById("search").value;
+	// Use regular expression to filter the search
 	let query = new RegExp("(\\b" + text + "\\b)", "gim");
+	// Grab the content of the paragraph to be highlighted.
 	let highlight = document.getElementById("highlighted").innerHTML;
+	// Add or remove the span tags using regular expressions around the word(s) being searched for.
 	let wordsToHighlight = highlight.replace(/(<span>|<\/span>)/igm, "");
 	document.getElementById("highlighted").innerHTML = wordsToHighlight;
 	let words = wordsToHighlight.replace(query, "<span>$1</span>");
