@@ -36,4 +36,25 @@ function rot13() {
 			newSentence += nextLetter;
 		}
 	}
+	// Finally, once the loop is finished return the value stored in newSentence and display it as text on the document object under the encryptedSentence Id.
+	document.getElementById("encryptedSentence").innerText = newSentence;
+}
+
+
+function replaceWords(){
+	let oldWords = document.getElementById("starTrek").textContent;
+	let words = {
+		"Data": "Skywalker",
+		"Borg": "Stormtrooper",
+		"Enterprise": "Death Star",
+		"Captain": "Darth Vader",
+		"Computer": "C3PO",
+		"Federation": "Empire"
+	};
+
+	oldWords = oldWords.replace(/Data|Borg|Enterprise|Captain|Computer|Federation/gi, function(matched) {
+		return words[matched];
+	});
+
+	document.getElementById("starWars").innerHTML = oldWords;
 }
