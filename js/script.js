@@ -1,3 +1,7 @@
+/***************************************
+ ROT 13 Encryption
+ **************************************/
+
 //Variables that contains the full Roman alphabet minus special characters and numbers
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let fullAlphabet = alphabet + alphabet + alphabet;
@@ -40,9 +44,13 @@ function rot13() {
 	document.getElementById("encryptedSentence").innerText = newSentence;
 }
 
-
+/*******************************************
+ Find and Replace
+ ******************************************/
 function replaceWords(){
+	// grab the text inside the tag with the starTrek id.
 	let oldWords = document.getElementById("starTrek").textContent;
+	// create an object of words that we want to replace.
 	let words = {
 		"Data": "Skywalker",
 		"Borg": "Stormtrooper",
@@ -51,10 +59,24 @@ function replaceWords(){
 		"Computer": "C3PO",
 		"Federation": "Empire"
 	};
-
+	// Replace the words using the global and local regular expressions with the values assigned in the words object and store in the newWords variable..
 	oldWords = oldWords.replace(/Data|Borg|Enterprise|Captain|Computer|Federation/gi, function(matched) {
 		return words[matched];
 	});
+// Return the value of newWords variable and display it on the page in the tag with the starWars Id
+	document.getElementById("starWars").innerHTML = oldWords
+}
 
-	document.getElementById("starWars").innerHTML = oldWords;
+/**********************************
+ Highlight a Word
+ **********************************/
+function highlightSearch() {
+	let text = document.getElementById("search").value;
+	let query = new RegExp("(\\b" + text + "\\b)", "gim");
+	let highlight = document.getElementById("highlighted").innerHTML;
+	let wordsToHighlight = highlight.replace(/(<span>|<\/span>)/igm, "");
+	document.getElementById("highlighted").innerHTML = wordsToHighlight;
+	let words = wordsToHighlight.replace(query, "<span>$1</span>");
+	document.getElementById("highlighted").innerHTML = words;
+
 }
