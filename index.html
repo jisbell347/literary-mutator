@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<!--Bootstrap-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="js/script.js"></script>
 		<title>JavaScript Event Challenge</title>
 	</head>
@@ -19,26 +20,52 @@
 							froth arabica cultivar crema body. Viennese cup robust turkish in fair trade body.</p>
 					</div>
 					<div class="col-md-4 p-5 my-5 text-center">
-						<button type="button" onclick="rot13()" class="btn btn-dark"> Encrypt</button>
+						<button type="button" onclick="rot13()" class="btn btn-dark"> Encrypt -></button>
 					</div>
 					<div class="col-md-4">
-						<h4 class="display-5">New Sentence</h4>
+						<h4 class="display-5">Encrypted Paragraph</h4>
 						<p id="encryptedSentence" class="border border-primary p-3"></p>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row pt-5">
 					<div class="col-md-4">
-						<p id="starTrek">What? We're not at all alike! Congratulations - you just destroyed the Enterprise. You're going to be an interesting companion,
+						<h4 class="dislay-5">Find and Replace!</h4>
+						<p id="starTrek" class="border border-success p-3">What? We're not at all alike! Congratulations - you just destroyed the Enterprise. You're going to be an interesting companion,
 							Mr. Data. The Federation's gone; the Borg is everywhere! Computer, lights up! Captain, why are we out here chasing comets? We know you're
 							dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. But the probability of making a six is no greater
 							than that of rolling a seven. Yes, absolutely, I do indeed concur, wholeheartedly! I think you've let your personal feelings cloud your judgement.
 							I suggest you drop it, Mr. Data.</p>
 					</div>
-					<div class="col-md-4">
-						<button type="button" class="btn btn-success" onclick="replaceWords()"></button>
+					<div class="col-md-4 p-5 my-5 text-center">
+						<button type="button" class="btn btn-success" onclick="replaceWords()">Replace -></button>
 					</div>
 					<div class="col-md-4">
-						<p id="starWars" class="border border-danger"></p>
+						<h4 class="display-5">New Paragraph</h4>
+						<p id="starWars" class="border border-danger p-3"></p>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-md-4">
+						<h4 class="dislay-5">Highlighting Magic</h4>
+						<p id="original" class="border border-dark p-3">Every day is taco ipsum tuesday. Burritos are very tasty.
+							It’s taco Tuesday Monday. 50 cent tacos! I’ll take 30. It’s taco time all the time. I’d have to say, those tacos
+							are on fleek. Does guac cost extra? Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise
+							sauce, all placed on top of a corn or flour tortilla. BARBACOA!! TACOS!! Yeah, apparently the taco shack was robbed. They left the money
+							but took the tacos. Carne asada on corn tortillas. TACOS!!</p>
+					</div>
+					<div class="col-md-4 p-5 my-5 text-center">
+						<div class="input-group input-group-sm mb-3">
+							<input type="text" id="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Word to Highlight">
+							<button type="button" onClick="highlightSearch()" class="btn btn-info">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<h4 class="display-5">Highlighted Paragraph</h4>
+						<p id="highlighted" class="border border-info p-3">Every day is taco ipsum tuesday. Burritos are very tasty.
+							It’s taco Tuesday Monday. 50 cent tacos! I’ll take 30. It’s taco time all the time. I’d have to say, those tacos
+							are on fleek. Does guac cost extra? Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise
+							sauce, all placed on top of a corn or flour tortilla. BARBACOA!! TACOS!! Yeah, apparently the taco shack was robbed. They left the money
+							but took the tacos. Carne asada on corn tortillas. TACOS!!</p>
 					</div>
 				</div>
 			</div>
